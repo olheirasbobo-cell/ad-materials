@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<html lang="zh-CN"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>广告图文案素材库 2025</title>
@@ -32,6 +30,7 @@ body {
   cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
 }
 .add-fab:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(102,126,234,0.4); }
+.add-fab.export-btn { background: linear-gradient(135deg, #38bdf8, #0ea5e9); margin-left: 12px; }
 .nav-tabs {
   display: flex; gap: 10px; padding: 20px 40px;
   background: #13131f; border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -186,12 +185,13 @@ body {
 <body>
 <div class="header">
   <h1>📢 广告图文案素材库</h1>
-  <p>2025题库&小程序 · 按内容类型分类整理（含微信朋友圈定向投放）</p>
+  <p>2025题库&amp;小程序 · 按内容类型分类整理（含微信朋友圈定向投放）</p>
   <div class="stats-row">
-    <div class="stat-card"><div class="num" id="total-count">1566</div><div class="label">文案总条数</div></div>
+    <div class="stat-card"><div class="num" id="total-count">2024</div><div class="label">文案总条数</div></div>
     <div class="stat-card"><div class="num">8</div><div class="label">内容类型</div></div>
     <div class="stat-card"><div class="num">41</div><div class="label">考试科目数</div></div>
     <button class="add-fab" onclick="openModal(null)">＋ 新增文案</button>
+    <button class="add-fab export-btn" onclick="exportUpdatePackage()" title="下载zip文件，上传到GitHub即可更新网站">📦 导出更新包</button>
   </div>
 </div>
 <div class="nav-tabs">
@@ -206,7 +206,7 @@ body {
 </div>
 <div class="content">
 <div class="section active" id="section-课程">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '课程')" /><button class="add-btn-inline" onclick="openModal('课程')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '课程')"><button class="add-btn-inline" onclick="openModal('课程')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#667eea25;border:1px solid #667eea55;color:#667eea">📚 通用</span><span class="exam-count">6 条文案</span></div>
 <div class="cards-grid">
@@ -3952,7 +3952,7 @@ body {
 </div>
 </div>
 <div class="section" id="section-图书">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '图书')" /><button class="add-btn-inline" onclick="openModal('图书')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '图书')"><button class="add-btn-inline" onclick="openModal('图书')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#f093fb25;border:1px solid #f093fb55;color:#f093fb">📖 一级建造师</span><span class="exam-count">6 条文案</span></div>
 <div class="cards-grid">
@@ -4179,7 +4179,7 @@ body {
 </div>
 </div>
 <div class="section" id="section-品牌内容">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '品牌内容')" /><button class="add-btn-inline" onclick="openModal('品牌内容')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '品牌内容')"><button class="add-btn-inline" onclick="openModal('品牌内容')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#4facfe25;border:1px solid #4facfe55;color:#4facfe">✨ 全考试</span><span class="exam-count">16 条文案</span></div>
 <div class="cards-grid">
@@ -4380,7 +4380,7 @@ https://mp.weixin.qq.com/s/1fluDl0O1wUtLFwf7uAKiA</div>
 </div>
 </div>
 <div class="section" id="section-功能">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '功能')" /><button class="add-btn-inline" onclick="openModal('功能')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '功能')"><button class="add-btn-inline" onclick="openModal('功能')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#43e97b25;border:1px solid #43e97b55;color:#43e97b">⚙️ 一级建造师
 二级建造师
@@ -4675,7 +4675,7 @@ https://mp.weixin.qq.com/s/1fluDl0O1wUtLFwf7uAKiA</div>
 <span class="position-badge" style="background:#4facfe30;color:#4facfe;border:1px solid #4facfe50">banner</span>
 </div>
 <div class="size-text">📐 686*176 / 686*248</div>
-<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺&quot;万人模考专场&quot;</span><span class="tag other">补充文案：模考 好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
+<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺"万人模考专场"</span><span class="tag other">补充文案：模考 好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="主标题：一建题库刷题直播
@@ -4687,7 +4687,7 @@ https://mp.weixin.qq.com/s/1fluDl0O1wUtLFwf7uAKiA</div>
 <span class="position-badge" style="background:#f093fb30;color:#f093fb;border:1px solid #f093fb50">弹窗</span>
 </div>
 <div class="size-text">📐 480*580</div>
-<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺&quot;万人模考专场&quot;</span><span class="tag other">补充文案：模考好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
+<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺"万人模考专场"</span><span class="tag other">补充文案：模考好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="主标题：一建题库刷题直播
@@ -4699,14 +4699,14 @@ https://mp.weixin.qq.com/s/1fluDl0O1wUtLFwf7uAKiA</div>
 <span class="position-badge" style="background:#667eea30;color:#667eea;border:1px solid #667eea50">闪屏</span>
 </div>
 <div class="size-text">📐 750*1114</div>
-<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺&quot;万人模考专场&quot;</span><span class="tag other">补充文案：模考好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
+<div class="copy-box"><span class="tag title">主标题：一建题库刷题直播</span><span class="tag subtitle">副标题：临考冲刺"万人模考专场"</span><span class="tag other">补充文案：模考好题滚动开练 带你精准提分</span><span class="tag btn-tag">按钮：前往刷题</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="section-裂变活动">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '裂变活动')" /><button class="add-btn-inline" onclick="openModal('裂变活动')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '裂变活动')"><button class="add-btn-inline" onclick="openModal('裂变活动')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#fa709a25;border:1px solid #fa709a55;color:#fa709a">🎯 二级建造师</span><span class="exam-count">4 条文案</span></div>
 <div class="cards-grid">
@@ -4758,7 +4758,7 @@ https://mp.weixin.qq.com/s/1fluDl0O1wUtLFwf7uAKiA</div>
 </div>
 </div>
 <div class="section" id="section-微信投放">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '微信投放')" /><button class="add-btn-inline" onclick="openModal('微信投放')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '微信投放')"><button class="add-btn-inline" onclick="openModal('微信投放')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#06b6d425;border:1px solid #06b6d455;color:#06b6d4">💬 一级建造师</span><span class="exam-count">125 条文案</span></div>
 <div class="cards-grid">
@@ -4873,7 +4873,7 @@ icon：陆续更新
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-一建管理 听过张君老师的课
+一建管理&nbsp;听过张君老师的课
 再也不想听其他！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -4883,7 +4883,7 @@ icon：陆续更新
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一建考后</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">9月30日-10月23日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理 听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理&nbsp;听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="24年一建已出分！考试难度再升级，25年考试建工人要尽早备战！" data-content="一建出成绩">
@@ -4900,15 +4900,15 @@ icon：陆续更新
 2025 一级建造师
 
 备考资料大礼包
-全新考试真题     高频考点汇总   海量题库随时刷
+全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷
 
-¥1  抢&gt;" data-content="一建出成绩">
+¥1&nbsp; 抢&gt;" data-content="一建出成绩">
 <div class="card-header">
 <div class="card-content-name">一建出成绩</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一建25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">12月10日-12月12日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题     高频考点汇总   海量题库随时刷</span><span class="tag wc-body">¥1  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷</span><span class="tag wc-body">¥1&nbsp; 抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="24年一建已出分！考试难度再升级，25年考试建工人要尽早备战！" data-content="一建出成绩">
@@ -4928,14 +4928,14 @@ icon：陆续更新
 10大硬核干货 各科精华资料
 
 限时秒杀
-¥1  抢&gt;
+¥1&nbsp;&nbsp;抢&gt;
 icon：活动即将结束" data-content="一建出成绩">
 <div class="card-header">
 <div class="card-content-name">一建出成绩</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一建25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">12月10日-12月12日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">10大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀</span><span class="tag wc-body">¥1  抢&gt;</span><span class="tag wc-icon">icon：活动即将结束</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">10大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀</span><span class="tag wc-body">¥1&nbsp;&nbsp;抢&gt;</span><span class="tag wc-icon">icon：活动即将结束</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="24年一建已出分！考试难度再升级，25年考试建工人要尽早备战！" data-content="一建出成绩">
@@ -4953,7 +4953,7 @@ icon：活动即将结束" data-content="一建出成绩">
 备考资料大礼包 10大硬核干货
 零基础小白+忙碌的打工人高效备考神器
 
-秒杀价  ¥1  
+秒杀价&nbsp; ¥1&nbsp;&nbsp;
 
 限时限量，立即抢购" data-content="一建出成绩">
 <div class="card-header">
@@ -4961,7 +4961,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一建25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">12月10日-12月12日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包 10大硬核干货</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">秒杀价  ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级建造师</span><span class="tag wc-body">备考资料大礼包 10大硬核干货</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">秒杀价&nbsp; ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="24年一建已出分！明年备考如何规划？来听听老师讲干货！抽免单啦！" data-content="一建出成绩-直播预约">
@@ -5429,7 +5429,7 @@ icon：活动即将结束" data-content="一建出成绩">
 √新考纲核心考点学懂了
 √不会做的难题解开了
 
-已为你免费开通一建《2025年3D考点精讲实训班》 
+已为你免费开通一建《2025年3D考点精讲实训班》&nbsp;
 现在打开APP就能开始听课" data-content="一建-零开精讲班">
 <div class="card-header">
 <div class="card-content-name">一建-零开精讲班</div>
@@ -5475,7 +5475,7 @@ icon：活动即将结束" data-content="一建出成绩">
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-一建管理 听过张君老师的课
+一建管理&nbsp;听过张君老师的课
 再也不想听其他！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -5485,7 +5485,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年一建-3D考点精讲实训班（管理）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">6月10日-7月7日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理 听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理&nbsp;听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="记忆卡智能筛选高频考点，只练重点，省时高效。免费使用&gt;" data-content="一建-学习记忆卡">
@@ -5536,7 +5536,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">学习记忆卡</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月8日-7月20日</span></div>
-<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​&quot;一建数字考点总记混？&quot;​​</span><span class="tag wc-body">记忆卡自动对比养护时间/偏差标准</span><span class="tag wc-body">测3次就能牢牢掌握！</span><span class="tag wc-body">按钮：免费使用</span></div>
+<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​"一建数字考点总记混？"​​</span><span class="tag wc-body">记忆卡自动对比养护时间/偏差标准</span><span class="tag wc-body">测3次就能牢牢掌握！</span><span class="tag wc-body">按钮：免费使用</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="【记忆卡】功能一招解决“一看就会、一考就忘”的老毛病！速用&gt;" data-content="一建-学习记忆卡">
@@ -5590,7 +5590,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">学习记忆卡</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月8日-7月20日</span></div>
-<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​&quot;实务背了不会用？&quot;​​</span><span class="tag wc-body">&quot;现场实操转化难​？&quot;​​</span><span class="tag wc-body">记忆卡设置“智能填空+AI讲义+课中答疑”三级训练</span><span class="tag wc-body">逐步提升应用能力</span><span class="tag wc-body">按钮：免费使用</span></div>
+<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​"实务背了不会用？"​​</span><span class="tag wc-body">"现场实操转化难​？"​​</span><span class="tag wc-body">记忆卡设置“智能填空+AI讲义+课中答疑”三级训练</span><span class="tag wc-body">逐步提升应用能力</span><span class="tag wc-body">按钮：免费使用</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="在职备考时间不够？记忆卡重复利用你的碎片化时间，随时随地学习" data-content="一建-学习记忆卡">
@@ -5810,14 +5810,14 @@ icon：活动即将结束" data-content="一建出成绩">
 变点即考点！
 跟着老师“拆书”，不用啃1000+页书本！
 
-《2025年3D考点精讲实训班》 已免费开通
+《2025年3D考点精讲实训班》&nbsp;已免费开通
 现在打开APP就能开始听课" data-content="一建-零开精讲班">
 <div class="card-header">
 <div class="card-content-name">一建-零开精讲班</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年一建-3D考点精讲实训班（管理）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月11日-7月31日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">今年一建教材变动15%</span><span class="tag wc-body">变点即考点！</span><span class="tag wc-body">跟着老师“拆书”，不用啃1000+页书本！</span><span class="tag wc-body">《2025年3D考点精讲实训班》 已免费开通</span><span class="tag wc-body">现在打开APP就能开始听课</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">今年一建教材变动15%</span><span class="tag wc-body">变点即考点！</span><span class="tag wc-body">跟着老师“拆书”，不用啃1000+页书本！</span><span class="tag wc-body">《2025年3D考点精讲实训班》&nbsp;已免费开通</span><span class="tag wc-body">现在打开APP就能开始听课</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一建备考倒计时2个月！名师手把手教你攻克难点！免费学习" data-content="一建-零开精讲班">
@@ -5856,7 +5856,7 @@ icon：活动即将结束" data-content="一建出成绩">
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-一建管理 听过张君老师的课
+一建管理&nbsp;听过张君老师的课
 再也不想听其他！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -5866,7 +5866,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年一建-3D考点精讲实训班（管理）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月11日-7月31日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理 听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一建管理&nbsp;听过张君老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年一建3D考点精讲实训班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="@所有人，一建冲刺阶段抢分，拿下案例题是关键！" data-content="一建案例精批体验课">
@@ -5905,7 +5905,7 @@ icon：活动即将结束" data-content="一建出成绩">
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-现在学还来得及  
+现在学还来得及&nbsp; 
 开启案例提分之路！
 
 得分技巧+答题思路
@@ -5966,13 +5966,13 @@ icon：活动即将结束" data-content="一建出成绩">
 ✅精准锁定采分点
 ✅理清案例解题套路
 
-案例题提分攻略 点击直接学" data-content="一建案例精批体验课">
+案例题提分攻略&nbsp;点击直接学" data-content="一建案例精批体验课">
 <div class="card-header">
 <div class="card-content-name">一建案例精批体验课</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">领取案例精批体验课（0元）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">8月11日-8月24日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025一级建造师</span><span class="tag wc-body">《案例精批体验课》免费领</span><span class="tag wc-body">✅逐题定位失分根源</span><span class="tag wc-body">✅精准锁定采分点</span><span class="tag wc-body">✅理清案例解题套路</span><span class="tag wc-body">案例题提分攻略 点击直接学</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025一级建造师</span><span class="tag wc-body">《案例精批体验课》免费领</span><span class="tag wc-body">✅逐题定位失分根源</span><span class="tag wc-body">✅精准锁定采分点</span><span class="tag wc-body">✅理清案例解题套路</span><span class="tag wc-body">案例题提分攻略&nbsp;点击直接学</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一建不想二战，还有1个多月逼自己一把，可以从案例题着手抢分！" data-content="一建案例精批体验课">
@@ -6584,7 +6584,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <div class="ad-card" data-copy="logo：环球网校
 
 恭喜你，赚翻啦！
-中级注安2025年《备考资料大礼包》  
+中级注安2025年《备考资料大礼包》&nbsp;&nbsp;
 秒杀价：¥5
 学习规划  考点汇总  速记口诀  海量题库
 
@@ -6614,13 +6614,13 @@ icon：活动即将结束" data-content="一建出成绩">
 √抵扣个税，领取国家职业技能补贴
 
 中级注安2025年《备考资料大礼包》
-限时秒杀 ¥5  抢&gt;" data-content="注安25年备考大礼包">
+限时秒杀 ¥5&nbsp;&nbsp;抢&gt;" data-content="注安25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">注安25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">注安25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">高含金量的注册安全工程师，没有不考的道理！</span><span class="tag wc-body">√政策硬性要求，必须持证上岗！</span><span class="tag wc-body">√中级职称，提高职称评定通过率</span><span class="tag wc-body">√抵扣个税，领取国家职业技能补贴</span><span class="tag wc-body">中级注安2025年《备考资料大礼包》</span><span class="tag wc-body">限时秒杀 ¥5  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">高含金量的注册安全工程师，没有不考的道理！</span><span class="tag wc-body">√政策硬性要求，必须持证上岗！</span><span class="tag wc-body">√中级职称，提高职称评定通过率</span><span class="tag wc-body">√抵扣个税，领取国家职业技能补贴</span><span class="tag wc-body">中级注安2025年《备考资料大礼包》</span><span class="tag wc-body">限时秒杀 ¥5&nbsp;&nbsp;抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年注安开始备考啦！争取今年一把过！趁放假多学习！" data-content="注安25年备考大礼包">
@@ -6636,14 +6636,14 @@ icon：活动即将结束" data-content="一建出成绩">
 
 2025 中级注册安全工程师
 备考资料大礼包
-全新考试真题     高频考点汇总   海量题库随时刷
-¥5  抢&gt;" data-content="注安25年备考大礼包">
+全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷
+¥5&nbsp; 抢&gt;" data-content="注安25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">注安25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">注安25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题     高频考点汇总   海量题库随时刷</span><span class="tag wc-body">¥5  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷</span><span class="tag wc-body">¥5&nbsp; 抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年注安开始备考啦！争取今年一把过！趁放假多学习！" data-content="注安25年备考大礼包">
@@ -6660,13 +6660,13 @@ icon：活动即将结束" data-content="一建出成绩">
 2025 中级注册安全工程师
 备考资料大礼包
 6大硬核干货 各科精华资料
-限时秒杀价：¥5  抢&gt;" data-content="注安25年备考大礼包">
+限时秒杀价：¥5&nbsp;&nbsp;抢&gt;" data-content="注安25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">注安25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">注安25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">6大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀价：¥5  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">6大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀价：¥5&nbsp;&nbsp;抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年注安开始备考啦！争取今年一把过！趁放假多学习！" data-content="注安25年备考大礼包">
@@ -6683,14 +6683,14 @@ icon：活动即将结束" data-content="一建出成绩">
 2025 中级注册安全工程师
 零基础小白+忙碌的打工人高效备考神器
 备考资料大礼包
-秒杀价  ¥5  
+秒杀价&nbsp; ¥5&nbsp;&nbsp;
 限时限量，立即抢购" data-content="注安25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">注安25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">注安25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价  ¥5</span><span class="tag wc-body">限时限量，立即抢购</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价&nbsp; ¥5</span><span class="tag wc-body">限时限量，立即抢购</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="不是每个知识点都要看课！云私塾7.0陪你备考注安，效率拉满！" data-content="注安云私塾7.0体验课-7天">
@@ -6827,7 +6827,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <div class="ad-card" data-copy="logo：环球网校
 
 2025年 中级注册安全工程师
-2025年《备考资料大礼包》  
+2025年《备考资料大礼包》&nbsp;&nbsp;
 学习规划  考点汇总  速记口诀  海量题库
 
 按钮：已免费发放到账户，点击学习&gt;" data-content="AI+注安体验课">
@@ -6882,7 +6882,7 @@ icon：活动即将结束" data-content="一建出成绩">
 
 2025 中级注册安全工程师
 备考资料大礼包
-全新考试真题     高频考点汇总   海量题库随时刷
+全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷
 
 资料已发到您账户，点击免费学&gt;" data-content="AI+注安体验课">
 <div class="card-header">
@@ -6890,7 +6890,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">AI+注安体验课</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">4月10日-4月30日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题     高频考点汇总   海量题库随时刷</span><span class="tag wc-body">资料已发到您账户，点击免费学&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 中级注册安全工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷</span><span class="tag wc-body">资料已发到您账户，点击免费学&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="注安人集合
@@ -7203,7 +7203,7 @@ icon：活动即将结束" data-content="一建出成绩">
 √考纲核心考点学懂了
 √不会做的难题解开了
 
-已为你免费开通注安《2025年考点精讲班》 
+已为你免费开通注安《2025年考点精讲班》&nbsp;
 现在打开APP就能开始听课" data-content="注安零开精讲班">
 <div class="card-header">
 <div class="card-content-name">注安零开精讲班</div>
@@ -7249,7 +7249,7 @@ icon：活动即将结束" data-content="一建出成绩">
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-备考注安 打基础很重要！
+备考注安&nbsp;打基础很重要！
 实力老师+好课 带你吃透教材！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -7259,7 +7259,7 @@ icon：活动即将结束" data-content="一建出成绩">
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年中级注安考点精讲班-管理+其他安全</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月22日-8月13日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">备考注安 打基础很重要！</span><span class="tag wc-body">实力老师+好课 带你吃透教材！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年考点精讲班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">备考注安&nbsp;打基础很重要！</span><span class="tag wc-body">实力老师+好课 带你吃透教材！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《2025年考点精讲班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="@所有人，25年注安冲刺阶段抢分，拿下管理科目是关键！" data-content="注安零开私教营体验课">
@@ -7298,7 +7298,7 @@ icon：活动即将结束" data-content="一建出成绩">
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-现在学还来得及  
+现在学还来得及&nbsp; 
 《精英私教营体验课》
 精准督学 考前开小灶
 
@@ -7355,13 +7355,13 @@ icon：活动即将结束" data-content="一建出成绩">
 
 ✅系统化学习抢分
 
-管理科目限时0元开通 点击直接学" data-content="注安零开私教营体验课">
+管理科目限时0元开通&nbsp;点击直接学" data-content="注安零开私教营体验课">
 <div class="card-header">
 <div class="card-content-name">注安零开私教营体验课</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开私教营体验课管理科目</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">8月14日-8月24日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注册安全工程师</span><span class="tag wc-body">《精英私教营》免费体验</span><span class="tag wc-body">✅系统化学习抢分</span><span class="tag wc-body">管理科目限时0元开通 点击直接学</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注册安全工程师</span><span class="tag wc-body">《精英私教营》免费体验</span><span class="tag wc-body">✅系统化学习抢分</span><span class="tag wc-body">管理科目限时0元开通&nbsp;点击直接学</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年注安不想二战，还有时间逼自己一把，从管理科目着手抢分！" data-content="注安零开私教营体验课">
@@ -7452,15 +7452,15 @@ icon：活动即将结束" data-content="一建出成绩">
 
 《考点串讲课》已免费开通
 
-捋清知识点    掌握核心考点   真题讲练结合
+捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合
 
-按钮：点击/打开环球网校APP   直接免费听" data-content="注安零开考点串讲班">
+按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听" data-content="注安零开考点串讲班">
 <div class="card-header">
 <div class="card-content-name">注安零开考点串讲班</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">考前两个月</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">8月14日-8月24日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注安</span><span class="tag wc-body">《考点串讲课》已免费开通</span><span class="tag wc-body">捋清知识点    掌握核心考点   真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP   直接免费听</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注安</span><span class="tag wc-body">《考点串讲课》已免费开通</span><span class="tag wc-body">捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="报名已结束，留给注安学员的备考时间不多了！" data-content="注安零开考点串讲班">
@@ -7577,13 +7577,13 @@ icon：活动即将结束" data-content="一建出成绩">
 
 《考前冲刺班》已免费开通
 
-点击/打开环球网校APP   直接免费听" data-content="注安零开考前冲刺班">
+点击/打开环球网校APP&nbsp;&nbsp; 直接免费听" data-content="注安零开考前冲刺班">
 <div class="card-header">
 <div class="card-content-name">注安零开考前冲刺班</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">临考冲刺</span><span class="meta-tag">单图</span><span class="meta-tag">9月4日-9月14日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注安</span><span class="tag wc-body">《考前冲刺班》已免费开通</span><span class="tag wc-body">点击/打开环球网校APP   直接免费听</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级注安</span><span class="tag wc-body">《考前冲刺班》已免费开通</span><span class="tag wc-body">点击/打开环球网校APP&nbsp;&nbsp; 直接免费听</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="备考时间仅剩2个月，留给注安学员的备考时间不多了！" data-content="注安零开考前冲刺班">
@@ -8223,14 +8223,14 @@ AI考点随身听
 
 2025 一级造价工程师
 备考资料大礼包
-全新考试真题     高频考点汇总   海量题库随时刷
-¥1  抢&gt;" data-content="一造25年备考大礼包">
+全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷
+¥1&nbsp; 抢&gt;" data-content="一造25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">一造25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一造25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题     高频考点汇总   海量题库随时刷</span><span class="tag wc-body">¥1  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷</span><span class="tag wc-body">¥1&nbsp; 抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一造开始备考啦！争取今年一把过4科！趁放假多学习！" data-content="一造25年备考大礼包">
@@ -8247,13 +8247,13 @@ AI考点随身听
 2025 一级造价工程师
 备考资料大礼包
 6大硬核干货 各科精华资料
-限时秒杀价：¥1  抢&gt;" data-content="一造25年备考大礼包">
+限时秒杀价：¥1&nbsp;&nbsp;抢&gt;" data-content="一造25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">一造25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一造25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">6大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀价：¥1  抢&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">6大硬核干货 各科精华资料</span><span class="tag wc-body">限时秒杀价：¥1&nbsp;&nbsp;抢&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一造开始备考啦！争取今年一把过4科！趁放假多学习！" data-content="一造25年备考大礼包">
@@ -8270,14 +8270,14 @@ AI考点随身听
 2025 一级造价工程师
 零基础小白+忙碌的打工人高效备考神器
 备考资料大礼包
-秒杀价  ¥1  
+秒杀价&nbsp; ¥1&nbsp;&nbsp;
 限时限量，立即抢购" data-content="一造25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">一造25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一造25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价  ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">零基础小白+忙碌的打工人高效备考神器</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价&nbsp; ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一造开始备考啦！争取今年一把过4科！趁放假多学习！" data-content="一造25年备考大礼包">
@@ -8295,14 +8295,14 @@ AI考点随身听
 25年教材大概率大改！
 
 备考资料大礼包
-秒杀价  ¥1  
+秒杀价&nbsp; ¥1&nbsp;&nbsp;
 限时限量，立即抢购" data-content="一造25年备考大礼包">
 <div class="card-header">
 <div class="card-content-name">一造25年备考大礼包</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">一造25年备考大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">1月1日-1月10日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一级造价工程师</span><span class="tag wc-body">25年教材大概率大改！</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价  ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">一级造价工程师</span><span class="tag wc-body">25年教材大概率大改！</span><span class="tag wc-body">备考资料大礼包</span><span class="tag wc-body">秒杀价&nbsp; ¥1</span><span class="tag wc-body">限时限量，立即抢购</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一造开始备考啦！争取今年一把过4科！趁放假多学习！" data-content="一造25年备考大礼包">
@@ -8317,7 +8317,7 @@ AI考点随身听
 <div class="ad-card" data-copy="logo：环球网校
 
 一级造价工程师证书
-√全国通用 √持证上岗薪资翻倍 √可承接更多项目 √评职称 √补贴更高 
+√全国通用 √持证上岗薪资翻倍 √可承接更多项目 √评职称 √补贴更高&nbsp;
 
 1元抢2025年一造《备考资料大礼包》 
 按钮：数量有限，先到先得" data-content="一造25年备考大礼包">
@@ -8345,7 +8345,7 @@ AI考点随身听
 2025 一级造价工程师
 
 已为您免费开通《备考资料大礼包》
-全新考试真题     高频考点汇总   海量题库随时刷
+全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷
 
 现在前往APP/小程序学习中心即可查收&gt;" data-content="有一造行为_未活跃-零开备考资料大礼包">
 <div class="card-header">
@@ -8353,7 +8353,7 @@ AI考点随身听
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开备考资料大礼包</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">5月22日-6月8日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">已为您免费开通《备考资料大礼包》</span><span class="tag wc-body">全新考试真题     高频考点汇总   海量题库随时刷</span><span class="tag wc-body">现在前往APP/小程序学习中心即可查收&gt;</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025 一级造价工程师</span><span class="tag wc-body">已为您免费开通《备考资料大礼包》</span><span class="tag wc-body">全新考试真题&nbsp;&nbsp;&nbsp;&nbsp; 高频考点汇总&nbsp;&nbsp; 海量题库随时刷</span><span class="tag wc-body">现在前往APP/小程序学习中心即可查收&gt;</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="造价人集合
@@ -8421,7 +8421,7 @@ AI考点随身听
 <div class="ad-card" data-copy="logo：环球网校
 
 一级造价工程师
-2025年《备考资料大礼包》  
+2025年《备考资料大礼包》&nbsp;&nbsp;
 学习规划  考点汇总  速记口诀  海量题库
 
 按钮：已免费发放到账户，点击学习&gt;" data-content="有一造行为_未活跃-零开备考资料大礼包">
@@ -8633,7 +8633,7 @@ AI考点随身听
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">学习记忆卡</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月16日-7月20日</span></div>
-<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​​​&quot;清单/定额规则总搞混？&quot;​</span><span class="tag wc-body">记忆卡对比标注关键差异点</span><span class="tag wc-body">测3次就能牢牢掌握！</span><span class="tag wc-body">按钮：免费使用</span></div>
+<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​​​"清单/定额规则总搞混？"​</span><span class="tag wc-body">记忆卡对比标注关键差异点</span><span class="tag wc-body">测3次就能牢牢掌握！</span><span class="tag wc-body">按钮：免费使用</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="【记忆卡】功能一招解决“一看就会、一考就忘”的老毛病！速用&gt;" data-content="一造-学习记忆卡">
@@ -8687,7 +8687,7 @@ AI考点随身听
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">学习记忆卡</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月16日-7月20日</span></div>
-<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​&quot;数据参数记不住？&quot;​</span><span class="tag wc-body">​​&quot;案例分析没思路？&quot;​</span><span class="tag wc-body">记忆卡设置“智能填空+AI讲义+课中答疑”三级训练</span><span class="tag wc-body">逐步提升应用能力</span><span class="tag wc-body">按钮：免费使用</span></div>
+<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">​​"数据参数记不住？"​</span><span class="tag wc-body">​​"案例分析没思路？"​</span><span class="tag wc-body">记忆卡设置“智能填空+AI讲义+课中答疑”三级训练</span><span class="tag wc-body">逐步提升应用能力</span><span class="tag wc-body">按钮：免费使用</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="在职备考时间不够？记忆卡重复利用你的碎片化时间，随时随地学习" data-content="一造-学习记忆卡">
@@ -8905,14 +8905,14 @@ AI考点随身听
 变点即考点！
 跟着老师“拆书”，不用啃1000+页书本！
 
-《2025年考点精讲班》 已免费开通
+《2025年考点精讲班》&nbsp;已免费开通
 现在打开APP就能开始听课" data-content="一造-零开精讲班">
 <div class="card-header">
 <div class="card-content-name">一造-零开精讲班</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年一造-考点精讲班（管理）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月11日-7月31日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">今年一造教材变动高达35%</span><span class="tag wc-body">变点即考点！</span><span class="tag wc-body">跟着老师“拆书”，不用啃1000+页书本！</span><span class="tag wc-body">《2025年考点精讲班》 已免费开通</span><span class="tag wc-body">现在打开APP就能开始听课</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">今年一造教材变动高达35%</span><span class="tag wc-body">变点即考点！</span><span class="tag wc-body">跟着老师“拆书”，不用啃1000+页书本！</span><span class="tag wc-body">《2025年考点精讲班》&nbsp;已免费开通</span><span class="tag wc-body">现在打开APP就能开始听课</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="25年一造备考倒计时3个月！名师手把手教你攻克难点！免费学习" data-content="一造-零开精讲班">
@@ -9704,7 +9704,7 @@ AI考点随身听
 <div class="ad-card" data-copy="logo：环球网校
 
 2024年初级经济师
-万人模考 
+万人模考&nbsp;
 试卷开放中
 
 百练不如一战 测出真实力" data-content="初经万人模考第二期">
@@ -9900,7 +9900,7 @@ AI考点随身听
 <div class="ad-card" data-copy="logo：环球网校
 
 2024年中级经济师
-万人模考 
+万人模考&nbsp;
 试卷开放中
 
 百练不如一战 测出真实力" data-content="中经万人模考第二期">
@@ -10528,7 +10528,7 @@ AI考点随身听
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-软考高级 听过石慧珠老师的课
+软考高级&nbsp;听过石慧珠老师的课
 再也不想听其他！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -10538,7 +10538,7 @@ AI考点随身听
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">中经考后转软考高级</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">11月22日-11月30日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">软考高级 听过石慧珠老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《软考高级模块精讲班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">软考高级&nbsp;听过石慧珠老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《软考高级模块精讲班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="24年中经已出分！本省高级经济师评审政策，先收藏起来！" data-content="中经出成绩">
@@ -10783,7 +10783,7 @@ AI考点随身听
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-软考高级 听过石慧珠老师的课
+软考高级&nbsp;听过石慧珠老师的课
 再也不想听其他！
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -10793,7 +10793,7 @@ AI考点随身听
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开软考高级精讲班</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">12月16日-12月18日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">软考高级 听过石慧珠老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《软考高级模块精讲班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">软考高级&nbsp;听过石慧珠老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《软考高级模块精讲班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="听劝！25年中经可以开始学习啦，0基础备考也争取今年一把过！" data-content="零开中经24年考点精讲班--经济基础">
@@ -11096,7 +11096,7 @@ icon：公共科目扛把子
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">学习记忆卡</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月8日-7月22日</span></div>
-<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">&quot;经济学概念太抽象？&quot;</span><span class="tag wc-body">&quot;公式总记混？&quot;</span><span class="tag wc-body">&quot;考点分散，体系庞杂？&quot;</span><span class="tag wc-body">记忆卡把理论变填空，边测边记，理解更轻松！</span><span class="tag wc-body">按钮：免费使用</span></div>
+<div class="copy-box"><span class="tag wc-body">logo 环球网校</span><span class="tag wc-body">"经济学概念太抽象？"</span><span class="tag wc-body">"公式总记混？"</span><span class="tag wc-body">"考点分散，体系庞杂？"</span><span class="tag wc-body">记忆卡把理论变填空，边测边记，理解更轻松！</span><span class="tag wc-body">按钮：免费使用</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="备考时间紧？抓重点！
@@ -11191,15 +11191,15 @@ icon：公共科目扛把子
 
 《考点精华课》已免费开通
 
-捋清知识点    掌握核心考点   真题讲练结合
+捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合
 
-按钮：点击/打开环球网校APP   直接免费听" data-content="中经零开精讲班">
+按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听" data-content="中经零开精讲班">
 <div class="card-header">
 <div class="card-content-name">中经零开精讲班</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年中经精华课（经济基础单科）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月11日-7月31日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《考点精华课》已免费开通</span><span class="tag wc-body">捋清知识点    掌握核心考点   真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP   直接免费听</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《考点精华课》已免费开通</span><span class="tag wc-body">捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="统一回复：是真的！
@@ -11269,7 +11269,7 @@ icon：公共科目扛把子
 √考纲核心考点学懂了
 √不会做的难题解开了
 
-已为你免费开通中经《2025年考点精华课》 
+已为你免费开通中经《2025年考点精华课》&nbsp;
 现在打开APP就能开始听课" data-content="中经零开精讲班">
 <div class="card-header">
 <div class="card-content-name">中经零开精讲班</div>
@@ -11290,7 +11290,7 @@ icon：公共科目扛把子
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-中经基础要打好 跟着刘艳霞老师学习！
+中经基础要打好&nbsp;跟着刘艳霞老师学习！
 有实力老师带你吃透教材！很重要
 考点讲解细致，语速舒适！学生反馈全程跟得下来！
 
@@ -11300,7 +11300,7 @@ icon：公共科目扛把子
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">零开2025年中经精华课（经济基础单科）</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">7月22日-8月13日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">中经基础要打好 跟着刘艳霞老师学习！</span><span class="tag wc-body">有实力老师带你吃透教材！很重要</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《考点精华课》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">中经基础要打好&nbsp;跟着刘艳霞老师学习！</span><span class="tag wc-body">有实力老师带你吃透教材！很重要</span><span class="tag wc-body">考点讲解细致，语速舒适！学生反馈全程跟得下来！</span><span class="tag wc-body">官方正版《考点精华课》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="报名季福利！免费送你中经经济基础精华课，备考有重点，学习更高效！" data-content="中经零开精讲班">
@@ -11392,15 +11392,15 @@ icon：公共科目扛把子
 
 《考点精华课》已免费开通
 
-捋清知识点    掌握核心考点   真题讲练结合
+捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合
 
-按钮：点击/打开环球网校APP   直接免费听" data-content="中经零开考点精华课">
+按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听" data-content="中经零开考点精华课">
 <div class="card-header">
 <div class="card-content-name">中经零开考点精华课</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">触发零开精华课经济基础科目</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">8月14日-8月24日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《考点精华课》已免费开通</span><span class="tag wc-body">捋清知识点    掌握核心考点   真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP   直接免费听</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《考点精华课》已免费开通</span><span class="tag wc-body">捋清知识点&nbsp;&nbsp;&nbsp; 掌握核心考点&nbsp;&nbsp; 真题讲练结合</span><span class="tag wc-body">按钮：点击/打开环球网校APP&nbsp;&nbsp; 直接免费听</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="中经考前福利！免费领《考点精华课》，浓缩高频考点，事半功倍~" data-content="中经零开考点精华课">
@@ -11635,13 +11635,13 @@ icon：公共科目扛把子
 《冲刺串讲班》
 考点串讲巩固 模考查漏补缺
 
-点击/打开环球网校APP   直接免费听" data-content="中经60天冲刺抢分课">
+点击/打开环球网校APP&nbsp;&nbsp; 直接免费听" data-content="中经60天冲刺抢分课">
 <div class="card-header">
 <div class="card-content-name">中经60天冲刺抢分课</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">60天倒计时</span><span class="meta-tag">单图</span><span class="meta-tag">9月4日-9月25日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《冲刺串讲班》</span><span class="tag wc-body">考点串讲巩固 模考查漏补缺</span><span class="tag wc-body">点击/打开环球网校APP   直接免费听</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025中级经济师</span><span class="tag wc-body">《冲刺串讲班》</span><span class="tag wc-body">考点串讲巩固 模考查漏补缺</span><span class="tag wc-body">点击/打开环球网校APP&nbsp;&nbsp; 直接免费听</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="注意注意，中经万人模考已开考！检验备考成果，及时攻破弱项！" data-content="中经万人模考">
@@ -12275,15 +12275,15 @@ AI随身学来了！
 2月15日-16日 邀你免费参加
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第一期-预约">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第一期-预约">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第一期-预约</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第一期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">2月10日-2月14日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">2月15日-16日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">2月15日-16日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="距离25年二建考试不足90天，免费参加万人模考，检验备考成果" data-content="二建25年万人模考第一期-预约">
@@ -12397,15 +12397,15 @@ AI随身学来了！
 提前熟悉考试，查缺补漏！
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第一期-考试">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第一期-考试">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第一期-考试</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第一期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">2月15日-2月16日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考免费开放中</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考免费开放中</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="二建万人模考开考啦！还原真实考场，免费参加，检验备考效果！" data-content="二建25年万人模考第一期-考试">
@@ -12517,15 +12517,15 @@ AI随身学来了！
 提前熟悉考试，查缺补漏！
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第一期-补考">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第一期-补考">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第一期-补考</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第一期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">2月17日-2月23日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考补考限时开放</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考补考限时开放</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="距离二建考试仅剩3个月！多模考一次，就比对手多一份经验！" data-content="二建25年万人模考第一期-补考">
@@ -12706,15 +12706,15 @@ AI随身学来了！
 3月22日-23日 邀你免费参加
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第二期-预约">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第二期-预约">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第二期-预约</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第二期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">3月17日-3月21日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">3月22日-23日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">3月22日-23日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="距离25年二建考试最后2个月，万人模考本周开放，免费参加" data-content="二建25年万人模考第二期-预约">
@@ -12827,15 +12827,15 @@ AI随身学来了！
 提前熟悉考试，查缺补漏！
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第二期-考试">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第二期-考试">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第二期-考试</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第二期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">3月22日-3月23日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考免费开放中</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考免费开放中</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="二建万人模考开考啦！还原真实考场，免费参加，检验备考效果！" data-content="二建25年万人模考第二期-考试">
@@ -12947,15 +12947,15 @@ AI随身学来了！
 提前熟悉考试，查缺补漏！
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建25年万人模考第二期-补考">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建25年万人模考第二期-补考">
 <div class="card-header">
 <div class="card-content-name">二建25年万人模考第二期-补考</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建25年万人模考第二期</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">3月24日-3月30日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考补考限时开放</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考补考限时开放</span><span class="tag wc-body">提前熟悉考试，查缺补漏！</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="距离二建考试仅剩2个月！多模考一次，就比对手多一份经验！" data-content="二建25年万人模考第二期-补考">
@@ -13067,15 +13067,15 @@ AI随身学来了！
 4月19日 邀你免费参加
 
 适合人群
-小白党                             emo党                       焦虑党
-规范答疑                       拟真模考                   定位错因  
-提升效率                       心中有底                   冲刺巩固" data-content="二建万人模考第三期-预约">
+小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党
+规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因&nbsp; 
+提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固" data-content="二建万人模考第三期-预约">
 <div class="card-header">
 <div class="card-content-name">二建万人模考第三期-预约</div>
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">二建万人模考第三期-预约</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">4月10日-4月27日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">4月19日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党                             emo党                       焦虑党</span><span class="tag wc-body">规范答疑                       拟真模考                   定位错因</span><span class="tag wc-body">提升效率                       心中有底                   冲刺巩固</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">2025年二级建造师</span><span class="tag wc-body">万人模考</span><span class="tag wc-body">4月19日 邀你免费参加</span><span class="tag wc-body">适合人群</span><span class="tag wc-body">小白党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emo党&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 焦虑党</span><span class="tag wc-body">规范答疑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 拟真模考&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 定位错因</span><span class="tag wc-body">提升效率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 心中有底&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 冲刺巩固</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="距离25年二建考试最后1个月，万人模考本周开放，免费参加" data-content="二建万人模考第三期-预约">
@@ -16768,7 +16768,7 @@ DeekSeep资料包免费领
 <div class="ad-card" data-copy="logo：环球网校
 
 中级会计职称报名进行中
-2025年《考点精讲班》  
+2025年《考点精讲班》&nbsp;&nbsp;
 教材解读 考点精讲 学练结合 
 
 按钮：已免费发放到账户，点击学习&gt;" data-content="中会-零开精讲班">
@@ -17141,7 +17141,7 @@ icon：课程已更新
 </div>
 <div class="ad-card" data-copy="logo：环球网校
 
-监理管理 听过沈磊老师的课
+监理管理&nbsp;听过沈磊老师的课
 再也不想听其他！
 考点讲解直击重点，举一反三！学员学习不犯困不走神！
 
@@ -17151,7 +17151,7 @@ icon：课程已更新
 <span class="position-badge" style="background:#0ea5e925;color:#0ea5e9;border:1px solid #0ea5e945">广告图文案</span>
 </div>
 <div class="meta-row"><span class="meta-tag">监理25年考点精讲班-理论法规</span><span class="meta-tag">单图</span><span class="meta-tag">1280*720（横版）</span><span class="meta-tag">2月17日-2月28日</span></div>
-<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">监理管理 听过沈磊老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解直击重点，举一反三！学员学习不犯困不走神！</span><span class="tag wc-body">官方正版《2025年考点精讲班》已免费发放账户</span></div>
+<div class="copy-box"><span class="tag wc-logo">logo：环球网校</span><span class="tag wc-body">监理管理&nbsp;听过沈磊老师的课</span><span class="tag wc-body">再也不想听其他！</span><span class="tag wc-body">考点讲解直击重点，举一反三！学员学习不犯困不走神！</span><span class="tag wc-body">官方正版《2025年考点精讲班》已免费发放账户</span></div>
 <div class="card-footer"><button class="copy-btn" onclick="copyText(this)">复制文案</button></div>
 </div>
 <div class="ad-card" data-copy="监理备考冲刺
@@ -19160,7 +19160,7 @@ AI赋能  快速起号  轻松开店
 </div>
 </div>
 <div class="section" id="section-其他">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '其他')" /><button class="add-btn-inline" onclick="openModal('其他')">＋ 添加到此分类</button></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案、课程名称..." oninput="filterCards(this, '其他')"><button class="add-btn-inline" onclick="openModal('其他')">＋ 添加到此分类</button></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#a18cd125;border:1px solid #a18cd155;color:#a18cd1">📌 通用</span><span class="exam-count">7 条文案</span></div>
 <div class="cards-grid">
@@ -19255,7 +19255,7 @@ x月周周测打卡挑战
 </div>
 
 <div class="section" id="section-公司营销活动">
-<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案内容..." oninput="filterCards(this, '公司营销活动')" /></div>
+<div class="search-wrap"><input class="search-input" type="text" placeholder="搜索文案内容..." oninput="filterCards(this, '公司营销活动')"></div>
 <div class="exam-group">
 <div class="exam-header"><span class="exam-badge" style="background:#ff6b3530;border:1px solid #ff6b3560;color:#ff6b35">🛒 双十一</span><span class="exam-count">172 条文案</span></div>
 <div class="cards-grid">
@@ -23721,12 +23721,12 @@ AI学习大礼包 +限定周边
     </div>
     <div class="form-row">
       <label>考试科目 *</label>
-      <input id="f-exam" list="exam-list" placeholder="输入或选择考试科目" autocomplete="off" />
+      <input id="f-exam" list="exam-list" placeholder="输入或选择考试科目" autocomplete="off">
       <datalist id="exam-list"></datalist>
     </div>
     <div class="form-row">
       <label>内容名称（课程/图书/投放计划名等）</label>
-      <input id="f-content" placeholder="例：2026年一建-考点精讲班" />
+      <input id="f-content" placeholder="例：2026年一建-考点精讲班">
     </div>
     <div class="form-row">
       <label>广告位置 / 文案类型</label>
@@ -23745,16 +23745,18 @@ AI学习大礼包 +限定周边
     </div>
     <div class="form-row">
       <label>尺寸</label>
-      <input id="f-size" placeholder="例：686*176 或 1280*720" />
+      <input id="f-size" placeholder="例：686*176 或 1280*720">
     </div>
     <div class="form-row">
       <label>文案内容 *</label>
-      <textarea id="f-copy" placeholder="主标题：xxx&#10;副标题：xxx&#10;按钮：立即学习"></textarea>
+      <textarea id="f-copy" placeholder="主标题：xxx
+副标题：xxx
+按钮：立即学习"></textarea>
       <div class="form-hint">每行一段，以「主标题：」「副标题：」「按钮：」开头会自动高亮</div>
     </div>
     <div class="form-row">
       <label>备注</label>
-      <input id="f-note" placeholder="设计注意事项（可选）" />
+      <input id="f-note" placeholder="设计注意事项（可选）">
     </div>
     <div class="modal-footer">
       <button class="btn-cancel" onclick="closeModal()">取消</button>
@@ -23762,7 +23764,7 @@ AI学习大礼包 +限定周边
     </div>
   </div>
 </div>
-<div class="toast" id="toast"></div>
+<div class="toast show" id="toast">正在生成更新包...</div>
 <script>
 const TYPE_COLORS = {"课程": "#667eea", "图书": "#f093fb", "品牌内容": "#4facfe", "功能": "#43e97b", "裂变活动": "#fa709a", "微信投放": "#06b6d4", "其他": "#a18cd1"};
 const TYPE_ICONS = {"课程": "📚", "图书": "📖", "品牌内容": "✨", "功能": "⚙️", "裂变活动": "🎯", "微信投放": "💬", "其他": "📌"};
@@ -23810,6 +23812,71 @@ function showToast(msg) {
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// Export update package for GitHub deployment
+async function exportUpdatePackage() {
+  showToast('正在生成更新包...');
+  
+  // Get current HTML content
+  const htmlContent = document.documentElement.outerHTML;
+  
+  // Create README
+  const readme = `# 广告图文案素材库
+
+环球网校 2025 广告图文案素材库，按内容类型分类整理。
+
+## 分类
+
+- 📚 课程
+- 📖 图书
+- ✨ 品牌内容
+- ⚙️ 功能
+- 🎯 裂变活动
+- 💬 微信投放
+- 🎯 公司营销活动（双十一/跨年狂欢/618/周年庆/新春活动/开学季）
+
+## 访问地址
+
+https://olheirasbobo-cell.github.io/ad-materials/
+
+## 更新方法
+
+1. 下载本仓库的 zip 文件
+2. 解压后替换 index.html 为新的素材库文件
+3. 重新压缩上传，或直接用 Git 推送
+
+---
+生成时间：${new Date().toLocaleString('zh-CN')}
+`;
+  
+  // Create a simple ZIP using JSZip-like approach with Data URI
+  // Since we can't easily include JSZip, we'll use a simpler approach:
+  // Create a download of just the HTML file with instructions
+  
+  const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'index.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  // Show instructions
+  setTimeout(() => {
+    alert(`✅ index.html 已下载！
+
+📤 上传到 GitHub 步骤：
+1. 打开 https://github.com/olheirasbobo-cell/ad-materials
+2. 点击 "Add file" → "Upload files"
+3. 选择刚下载的 index.html，覆盖原文件
+4. 点击 "Commit changes"
+5. 等待 1-2 分钟，网站自动更新
+
+🔗 网站地址：https://olheirasbobo-cell.github.io/ad-materials/`);
+  }, 500);
 }
 
 function updateTotalCount() {
@@ -23975,5 +24042,7 @@ function loadUserData() {
 
 window.addEventListener('DOMContentLoaded', loadUserData);
 </script>
-</body>
-</html>
+
+<div id="_135editor-webext" version="2.0.19">
+    <span id="ex_135root" description="适配老版本插件-使用验证"></span>
+  </div><div id="el-popper-container-7747"></div></body></html>
